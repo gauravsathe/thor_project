@@ -22,7 +22,7 @@ i = 0
 
 for document in allDocs :
 
-    allEvents = open(cwd + "\\" + document).readlines()
+    allEvents = open(cwd + "/" + document).readlines()
 
     for event in allEvents :
         _id = _id + 1

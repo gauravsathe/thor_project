@@ -6,7 +6,6 @@ Created on Mon Jan 25 14:56:29 2016
 """
 
 from role_entity_map import role_entity_map
-from os.path import basename
 
 def extractArguments(event, Coreferences, EntityMentions) :
     

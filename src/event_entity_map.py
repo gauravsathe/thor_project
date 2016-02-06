@@ -11,7 +11,7 @@ from extractElements import extractElements
 from extractArguments import extractArguments
 import time
 
-cwd = "gdis"
+cwd = "../gdis"
 
 allDocs = os.listdir(cwd)
 
@@ -22,7 +22,7 @@ t1 = time.time()
 for document in allDocs :
     
     # Load document
-    doc = json.loads(open(cwd + "\\" + document, "r").read())
+    doc = json.loads(open(cwd + "/" + document, "r").read())
     
     # Check if document has events
     events = doc["adept.common.HltContentContainer"]["eventMentions"]
@@ -49,15 +49,14 @@ for document in allDocs :
     allEventArguments = [arg for arg in allEventArguments if arg != None ]
     
     if len(allEventArguments) > 0 :
-        outFile = os.path.splitext(document)[0] + ".jsonl"        
+        outFile = os.path.splitext(document)[0] + ".jl"        
         
-        output = open("gdis_eventMentions\\" + outFile,"w")
-        #for event in allEventArguments :
-        #    output.write(json.dumps(event) + "\n")
+        output = open("../gdis_eventMentions/" + outFile,"w")
+        
         output.writelines([json.dumps(event)+"\n" for event in allEventArguments])
+        
         output.close()
         
-
     i = i+1
     
     if i % 500 == 0 :
