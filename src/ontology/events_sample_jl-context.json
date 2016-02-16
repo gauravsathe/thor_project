@@ -1,0 +1,23 @@
+{"@context": {
+    "affected": {"@id": "http://schema.dig.isi.edu/ontology/affected"},
+    "Thing": {
+        "@type": "@id",
+        "@id": "http://schema.org/Thing"
+    },
+    "hasPhrase": {"@id": "http://schema.dig.isi.edu/ontology/hasPhrase"},
+    "cause": {"@id": "http://schema.org/cause"},
+    "Event": {
+        "@type": "@id",
+        "@id": "http://schema.org/Event"
+    },
+    "name": {"@id": "http://schema.org/name"},
+    "a": "@type",
+    "hasPart": {"@id": "http://schema.org/hasPart"},
+    "mentions": {"@id": "http://schema.org/mentions"},
+    "uri": "@id",
+    "hasType": {"@id": "http://schema.dig.isi.edu/ontology/hasType"},
+    "CreativeWork": {
+        "@type": "@id",
+        "@id": "http://schema.org/CreativeWork"
+    }
+}}

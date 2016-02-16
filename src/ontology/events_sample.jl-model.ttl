@@ -1,0 +1,3706 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix schema: <http://schema.org/> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix memex: <http://schema.dig.isi.edu/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:node1abgso67fx1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "events_sample.jl" ;
+	km-dev:modelPublicationTime "1455487195375"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"location\"},{\"columnName\":\"value\"}],[{\"columnName\":\"docId\"}],[{\"columnName\":\"eventType\"}],[{\"columnName\":\"location\"},{\"columnName\":\"type\"}],[{\"columnName\":\"object\"},{\"columnName\":\"context\"}],[{\"columnName\":\"object\"},{\"columnName\":\"type\"}],[{\"columnName\":\"location\"},{\"columnName\":\"context\"}],[{\"columnName\":\"observed\"},{\"columnName\":\"value\"}],[{\"columnName\":\"observed\"},{\"columnName\":\"context\"}],[{\"columnName\":\"observed\"},{\"columnName\":\"type\"}],[{\"columnName\":\"caused\"},{\"columnName\":\"context\"}],[{\"columnName\":\"caused\"},{\"columnName\":\"value\"}],[{\"columnName\":\"affected\"},{\"columnName\":\"type\"}],[{\"columnName\":\"affected\"},{\"columnName\":\"value\"}],[{\"columnName\":\"object\"},{\"columnName\":\"value\"}],[{\"columnName\":\"caused\"},{\"columnName\":\"type\"}],[{\"columnName\":\"affected\"},{\"columnName\":\"context\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"observed\"},{\"columnName\":\"obs_prop\"}],[{\"columnName\":\"eventType\"}],[{\"columnName\":\"object\"},{\"columnName\":\"context\"}],[{\"columnName\":\"object\"},{\"columnName\":\"type_prop\"}],[{\"columnName\":\"object\"},{\"columnName\":\"type\"}],[{\"columnName\":\"observed\"},{\"columnName\":\"value\"}],[{\"columnName\":\"observed\"},{\"columnName\":\"context\"}],[{\"columnName\":\"event_uri\"}],[{\"columnName\":\"affected\"},{\"columnName\":\"type\"}],[{\"columnName\":\"affected\"},{\"columnName\":\"value\"}],[{\"columnName\":\"object\"},{\"columnName\":\"value\"}],[{\"columnName\":\"caused\"},{\"columnName\":\"thing4_uri\"}],[{\"columnName\":\"observed\"},{\"columnName\":\"thing5_uri\"}],[{\"columnName\":\"caused\"},{\"columnName\":\"type\"}],[{\"columnName\":\"location\"},{\"columnName\":\"loc_prop\"}],[{\"columnName\":\"object\"},{\"columnName\":\"thing2_uri\"}],[{\"columnName\":\"location\"},{\"columnName\":\"value\"}],[{\"columnName\":\"location\"},{\"columnName\":\"thing1_uri\"}],[{\"columnName\":\"location\"},{\"columnName\":\"type\"}],[{\"columnName\":\"location\"},{\"columnName\":\"context\"}],[{\"columnName\":\"observed\"},{\"columnName\":\"type\"}],[{\"columnName\":\"caused\"},{\"columnName\":\"context\"}],[{\"columnName\":\"caused\"},{\"columnName\":\"value\"}],[{\"columnName\":\"affected\"},{\"columnName\":\"aff_prop\"}],[{\"columnName\":\"caused\"},{\"columnName\":\"cau_prop\"}],[{\"columnName\":\"affected\"},{\"columnName\":\"thing3_uri\"}],[{\"columnName\":\"creativework_uri\"}],[{\"columnName\":\"affected\"},{\"columnName\":\"context\"}]]" ;
+	km-dev:hasModelLabel "events_sample.jl" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"object\"},
+                    {\"columnName\": \"type\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"type_prop\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return entProp(getValue(\\\"type\\\"))\\n\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"type_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"docId\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"creativework_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return \\\"creativeWork/\\\" + getValue(\\\"docId\\\")\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"docId\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"creativework_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"object\"},
+                    {\"columnName\": \"type\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"type_prop\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"val = getValue(\\\"type\\\")\\n\\nif val == \\\"PER\\\" or val == \\\"PER.Group\\\" :\\n    return \\\"Person\\\"\\nelse :\\n    return \\\"Thing\\\"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"type_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"docId\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"creativework_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return \\\"creativeWork/\\\" + getValue(\\\"docId\\\")\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"docId\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"creativework_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"eventType\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"event_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return uuid_uri(\\\"event/\\\")\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"event_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"location\"},
+                    {\"columnName\": \"type\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"loc_prop\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return locProp(getValue(\\\"type\\\"))\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"loc_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"affected\"},
+                    {\"columnName\": \"type\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"aff_prop\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return entProp(getValue(\\\"type\\\"))\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"aff_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"caused\"},
+                    {\"columnName\": \"type\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"cau_prop\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return entProp(getValue(\\\"type\\\"))\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"cau_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"observed\"},
+                    {\"columnName\": \"type\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"obs_prop\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return entProp(getValue(\\\"type\\\"))\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"obs_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"location\"},
+                    {\"columnName\": \"loc_prop\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"thing1_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return getValue(\\\"loc_prop\\\") + \\\"/\\\" + getValue(\\\"type\\\")\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"type\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"loc_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"thing1_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"object\"},
+                    {\"columnName\": \"type_prop\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"thing2_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return getValue(\\\"type_prop\\\") + \\\"/\\\" + getValue(\\\"type\\\")\\n\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"type\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"type_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"thing2_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"affected\"},
+                    {\"columnName\": \"aff_prop\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"thing3_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return getValue(\\\"aff_prop\\\") + \\\"/\\\" + getValue(\\\"type\\\")\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"type\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"aff_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"thing3_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"caused\"},
+                    {\"columnName\": \"cau_prop\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"thing4_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return getValue(\\\"cau_prop\\\") + \\\"/\\\" + getValue(\\\"type\\\")\\n\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"type\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"cau_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"thing4_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"observed\"},
+                    {\"columnName\": \"obs_prop\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"thing5_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return getValue(\\\"obs_prop\\\") + \\\"/\\\" + getValue(\\\"type\\\")\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"obs_prop\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"thing5_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"eventType\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://schema.dig.isi.edu/ontology/hasType\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:Event1 (add)\",
+                    \"DomainId\": \"http://schema.org/Event1\",
+                    \"DomainUri\": \"http://schema.org/Event\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"eventType\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"eventType\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"location\"},
+                    {\"columnName\": \"type\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://schema.dig.isi.edu/ontology/hasType\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:Thing1 (add)\",
+                    \"DomainId\": \"http://schema.org/Thing1\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"object\"},
+                    {\"columnName\": \"type\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://schema.dig.isi.edu/ontology/hasType\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:Thing2 (add)\",
+                    \"DomainId\": \"http://schema.org/Thing2\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"location\"},
+                    {\"columnName\": \"value\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://schema.org/name\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:Thing1\",
+                    \"DomainId\": \"http://schema.org/Thing1\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"value\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"value\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"object\"},
+                    {\"columnName\": \"value\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://schema.org/name\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:Thing2\",
+                    \"DomainId\": \"http://schema.org/Thing2\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"value\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"value\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"creativework_uri\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://schema.org/CreativeWork\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://schema.org/CreativeWork1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:CreativeWork1 (add)\",
+                    \"DomainId\": \"http://schema.org/CreativeWork1\",
+                    \"DomainUri\": \"http://schema.org/CreativeWork\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"creativework_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"creativework_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"creativework_uri\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://schema.org/CreativeWork\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://schema.org/CreativeWork1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:CreativeWork1 (add)\",
+                    \"DomainId\": \"http://schema.org/CreativeWork1\",
+                    \"DomainUri\": \"http://schema.org/CreativeWork\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"creativework_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"creativework_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"event_uri\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://schema.org/Event\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://schema.org/Event1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:Event1\",
+                    \"DomainId\": \"http://schema.org/Event1\",
+                    \"DomainUri\": \"http://schema.org/Event\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"event_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"event_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"location\"},
+                    {\"columnName\": \"loc_prop\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"loc_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"loc_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"UnassignSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"location\"},
+                    {\"columnName\": \"loc_prop\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isSubclassOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://schema.org/Thing\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://schema.org/Thing1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"loc_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"loc_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"object\"},
+                    {\"columnName\": \"type_prop\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isSubclassOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://schema.org/Thing\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://schema.org/Thing2\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"type_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"type_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"affected\"},
+                    {\"columnName\": \"type\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://schema.dig.isi.edu/ontology/hasType\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:Thing3 (add)\",
+                    \"DomainId\": \"http://schema.org/Thing3\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"affected\"},
+                    {\"columnName\": \"value\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://schema.org/name\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:Thing3\",
+                    \"DomainId\": \"http://schema.org/Thing3\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"value\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"value\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"affected\"},
+                    {\"columnName\": \"aff_prop\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isSubclassOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://schema.org/Thing\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://schema.org/Thing3\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"aff_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"aff_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"caused\"},
+                    {\"columnName\": \"type\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.dig.isi.edu/ontology/hasType\",
+                    \"DomainLabel\": \"schema:Thing4 (add)\",
+                    \"DomainId\": \"http://schema.org/Thing4\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"caused\"},
+                    {\"columnName\": \"value\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.org/name\",
+                    \"DomainLabel\": \"schema:Thing4\",
+                    \"DomainId\": \"http://schema.org/Thing4\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"value\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"value\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"caused\"},
+                    {\"columnName\": \"cau_prop\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isSubclassOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://schema.org/Thing\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://schema.org/Thing4\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"cau_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"cau_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"object\"},
+                    {\"columnName\": \"context\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.dig.isi.edu/ontology/hasPhrase\",
+                    \"DomainLabel\": \"schema:Thing2\",
+                    \"DomainId\": \"http://schema.org/Thing2\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"context\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"context\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"location\"},
+                    {\"columnName\": \"context\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.dig.isi.edu/ontology/hasPhrase\",
+                    \"DomainLabel\": \"schema:Thing1\",
+                    \"DomainId\": \"http://schema.org/Thing1\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"context\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"context\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"affected\"},
+                    {\"columnName\": \"context\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.dig.isi.edu/ontology/hasPhrase\",
+                    \"DomainLabel\": \"schema:Thing3\",
+                    \"DomainId\": \"http://schema.org/Thing3\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"context\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"context\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"caused\"},
+                    {\"columnName\": \"context\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.dig.isi.edu/ontology/hasPhrase\",
+                    \"DomainLabel\": \"schema:Thing4\",
+                    \"DomainId\": \"http://schema.org/Thing4\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"context\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"context\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"observed\"},
+                    {\"columnName\": \"type\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.dig.isi.edu/ontology/hasType\",
+                    \"DomainLabel\": \"schema:Thing5 (add)\",
+                    \"DomainId\": \"http://schema.org/Thing5\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"observed\"},
+                    {\"columnName\": \"context\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.dig.isi.edu/ontology/hasPhrase\",
+                    \"DomainLabel\": \"schema:Thing5\",
+                    \"DomainId\": \"http://schema.org/Thing5\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"context\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"context\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"observed\"},
+                    {\"columnName\": \"value\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://schema.org/name\",
+                    \"DomainLabel\": \"schema:Thing5\",
+                    \"DomainId\": \"http://schema.org/Thing5\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"value\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"value\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"observed\"},
+                    {\"columnName\": \"obs_prop\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isSubclassOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://schema.org/Thing\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://schema.org/Thing5\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"obs_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"obs_prop\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"location\"},
+                    {\"columnName\": \"thing1_uri\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://schema.org/Thing\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://schema.org/Thing1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:Thing1\",
+                    \"DomainId\": \"http://schema.org/Thing1\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"thing1_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"thing1_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"object\"},
+                    {\"columnName\": \"thing2_uri\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://schema.org/Thing\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://schema.org/Thing2\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:Thing2\",
+                    \"DomainId\": \"http://schema.org/Thing2\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"thing2_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"object\\\"},{\\\"columnName\\\":\\\"thing2_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"affected\"},
+                    {\"columnName\": \"thing3_uri\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://schema.org/Thing\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://schema.org/Thing3\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:Thing3\",
+                    \"DomainId\": \"http://schema.org/Thing3\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"thing3_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"affected\\\"},{\\\"columnName\\\":\\\"thing3_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"caused\"},
+                    {\"columnName\": \"thing4_uri\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://schema.org/Thing\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://schema.org/Thing4\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:Thing4\",
+                    \"DomainId\": \"http://schema.org/Thing4\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"thing4_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"caused\\\"},{\\\"columnName\\\":\\\"thing4_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"SemanticType\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"observed\"},
+                    {\"columnName\": \"thing5_uri\"}
+                ],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://schema.org/Thing\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://schema.org/Thing5\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
+                    \"DomainLabel\": \"schema:Thing5\",
+                    \"DomainId\": \"http://schema.org/Thing5\",
+                    \"DomainUri\": \"http://schema.org/Thing\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"thing5_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"observed\\\"},{\\\"columnName\\\":\\\"thing5_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://schema.org/Thing\",
+                    \"edgeId\": \"http://schema.org/hasPart\",
+                    \"edgeSourceId\": \"http://schema.org/Event1\",
+                    \"edgeTargetId\": \"http://schema.org/Thing1\",
+                    \"edgeSourceUri\": \"http://schema.org/Event\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://schema.org/Thing\",
+                    \"edgeId\": \"http://schema.org/hasPart\",
+                    \"edgeSourceId\": \"http://schema.org/Event1\",
+                    \"edgeTargetId\": \"http://schema.org/Thing2\",
+                    \"edgeSourceUri\": \"http://schema.org/Event\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://schema.org/Event\",
+                    \"edgeId\": \"http://schema.org/mentions\",
+                    \"edgeSourceId\": \"http://schema.org/CreativeWork1\",
+                    \"edgeTargetId\": \"http://schema.org/Event1\",
+                    \"edgeSourceUri\": \"http://schema.org/CreativeWork\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://schema.org/Thing\",
+                    \"edgeId\": \"http://schema.org/hasPart\",
+                    \"edgeSourceId\": \"http://schema.org/Event1\",
+                    \"edgeTargetId\": \"http://schema.org/Thing1\",
+                    \"edgeSourceUri\": \"http://schema.org/Event\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://schema.org/Thing\",
+                    \"edgeId\": \"http://schema.org/hasPart\",
+                    \"edgeSourceId\": \"http://schema.org/Event1\",
+                    \"edgeTargetId\": \"http://schema.org/Thing2\",
+                    \"edgeSourceUri\": \"http://schema.org/Event\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://schema.org/Event\",
+                    \"edgeId\": \"http://schema.org/mentions\",
+                    \"edgeSourceId\": \"http://schema.org/CreativeWork1\",
+                    \"edgeTargetId\": \"http://schema.org/Event1\",
+                    \"edgeSourceUri\": \"http://schema.org/CreativeWork\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://schema.org/Thing\",
+                    \"edgeId\": \"http://schema.dig.isi.edu/ontology/affected\",
+                    \"edgeSourceId\": \"http://schema.org/Event1\",
+                    \"edgeTargetId\": \"http://schema.org/Thing3\",
+                    \"edgeSourceUri\": \"http://schema.org/Event\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [{
+                    \"edgeId\": \"http://schema.org/hasPart\",
+                    \"edgeSourceId\": \"http://schema.org/Event1\",
+                    \"edgeTargetId\": \"http://schema.org/Thing1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://schema.org/Thing\",
+                    \"edgeId\": \"http://schema.org/contentLocation\",
+                    \"edgeSourceId\": \"http://schema.org/Event1\",
+                    \"edgeTargetId\": \"http://schema.org/Thing1\",
+                    \"edgeSourceUri\": \"http://schema.org/Event\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [{
+                    \"edgeId\": \"http://schema.org/contentLocation\",
+                    \"edgeSourceId\": \"http://schema.org/Event1\",
+                    \"edgeTargetId\": \"http://schema.org/Thing1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://schema.org/Thing\",
+                    \"edgeId\": \"http://schema.org/hasPart\",
+                    \"edgeSourceId\": \"http://schema.org/Event1\",
+                    \"edgeTargetId\": \"http://schema.org/Thing1\",
+                    \"edgeSourceUri\": \"http://schema.org/Event\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"http://localhost:8080/R2RMLMapping/local/events_sample.jl-model.ttl\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP6:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://schema.org/Thing\",
+                    \"edgeId\": \"http://schema.org/cause\",
+                    \"edgeTargetId\": \"http://schema.org/Thing4\",
+                    \"edgeSourceId\": \"http://schema.org/Event1\",
+                    \"edgeSourceUri\": \"http://schema.org/Event\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS5AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://schema.org/Thing\",
+                    \"edgeId\": \"http://schema.org/hasPart\",
+                    \"edgeTargetId\": \"http://schema.org/Thing5\",
+                    \"edgeSourceId\": \"http://schema.org/Event1\",
+                    \"edgeSourceUri\": \"http://schema.org/Event\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    }
+]""" .
+
+km-dev:TriplesMap_2a37550c-5fc8-4083-9432-b462a8153a76 a rr:TriplesMap .
+
+_:node1abgso67fx1 km-dev:hasTriplesMap km-dev:TriplesMap_2a37550c-5fc8-4083-9432-b462a8153a76 .
+
+km-dev:TriplesMap_2a37550c-5fc8-4083-9432-b462a8153a76 km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx2 rr:tableName "events_sample.jl" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasLogicalTable _:node1abgso67fx2 .
+
+km-dev:TriplesMap_2a37550c-5fc8-4083-9432-b462a8153a76 rr:logicalTable _:node1abgso67fx2 ;
+	rr:subjectMap _:node1abgso67fx3 .
+
+_:node1abgso67fx1 km-dev:hasSubjectMap _:node1abgso67fx3 .
+
+_:node1abgso67fx3 km-dev:isPartOfMapping _:node1abgso67fx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://schema.org/CreativeWork1" ;
+	rr:class schema:CreativeWork ;
+	rr:template "creativeWork/{docId}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_b617beb0-1b21-4ef4-a21e-ffe81f9751da rr:predicate schema:mentions .
+
+km-dev:RefObjectMap_4726213f-e0de-4546-90de-add56ad8dc80 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_8329089f-1106-4e03-811c-41a884329796 ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap km-dev:RefObjectMap_4726213f-e0de-4546-90de-add56ad8dc80 .
+
+km-dev:PredicateObjectMap_b617beb0-1b21-4ef4-a21e-ffe81f9751da rr:objectMap km-dev:RefObjectMap_4726213f-e0de-4546-90de-add56ad8dc80 .
+
+km-dev:TriplesMap_2a37550c-5fc8-4083-9432-b462a8153a76 rr:predicateObjectMap km-dev:PredicateObjectMap_b617beb0-1b21-4ef4-a21e-ffe81f9751da .
+
+km-dev:PredicateObjectMap_b617beb0-1b21-4ef4-a21e-ffe81f9751da a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b617beb0-1b21-4ef4-a21e-ffe81f9751da .
+
+km-dev:TriplesMap_8329089f-1106-4e03-811c-41a884329796 a rr:TriplesMap .
+
+_:node1abgso67fx1 km-dev:hasTriplesMap km-dev:TriplesMap_8329089f-1106-4e03-811c-41a884329796 .
+
+km-dev:TriplesMap_8329089f-1106-4e03-811c-41a884329796 km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx4 rr:tableName "events_sample.jl" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasLogicalTable _:node1abgso67fx4 .
+
+km-dev:TriplesMap_8329089f-1106-4e03-811c-41a884329796 rr:logicalTable _:node1abgso67fx4 ;
+	rr:subjectMap _:node1abgso67fx5 .
+
+_:node1abgso67fx1 km-dev:hasSubjectMap _:node1abgso67fx5 .
+
+_:node1abgso67fx5 km-dev:isPartOfMapping _:node1abgso67fx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://schema.org/Event1" ;
+	rr:class schema:Event ;
+	rr:template "{event_uri}" .
+
+km-dev:PredicateObjectMap_af3e5862-79c0-49c6-8bb1-4969bcb81eba rr:predicate memex:affected .
+
+km-dev:RefObjectMap_8e932684-1472-4365-8d88-0ed1e2547295 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_d61fddd6-de67-49c7-9a23-a2573c2fd1f0 ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap km-dev:RefObjectMap_8e932684-1472-4365-8d88-0ed1e2547295 .
+
+km-dev:PredicateObjectMap_af3e5862-79c0-49c6-8bb1-4969bcb81eba rr:objectMap km-dev:RefObjectMap_8e932684-1472-4365-8d88-0ed1e2547295 .
+
+km-dev:TriplesMap_8329089f-1106-4e03-811c-41a884329796 rr:predicateObjectMap km-dev:PredicateObjectMap_af3e5862-79c0-49c6-8bb1-4969bcb81eba .
+
+km-dev:PredicateObjectMap_af3e5862-79c0-49c6-8bb1-4969bcb81eba a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_af3e5862-79c0-49c6-8bb1-4969bcb81eba .
+
+km-dev:PredicateObjectMap_f710efce-f1eb-46cc-bd9d-77771e68ad90 rr:predicate memex:hasType .
+
+_:node1abgso67fx6 rr:column "eventType" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx6 .
+
+km-dev:PredicateObjectMap_f710efce-f1eb-46cc-bd9d-77771e68ad90 rr:objectMap _:node1abgso67fx6 .
+
+km-dev:TriplesMap_8329089f-1106-4e03-811c-41a884329796 rr:predicateObjectMap km-dev:PredicateObjectMap_f710efce-f1eb-46cc-bd9d-77771e68ad90 .
+
+km-dev:PredicateObjectMap_f710efce-f1eb-46cc-bd9d-77771e68ad90 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f710efce-f1eb-46cc-bd9d-77771e68ad90 .
+
+km-dev:PredicateObjectMap_35399c02-6beb-4982-898c-9c392a75289a rr:predicate schema:cause .
+
+km-dev:RefObjectMap_92fba044-2f03-4422-95c4-0c1c4bf930eb a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_94030389-d843-4fb5-83cf-7ab250352319 ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap km-dev:RefObjectMap_92fba044-2f03-4422-95c4-0c1c4bf930eb .
+
+km-dev:PredicateObjectMap_35399c02-6beb-4982-898c-9c392a75289a rr:objectMap km-dev:RefObjectMap_92fba044-2f03-4422-95c4-0c1c4bf930eb .
+
+km-dev:TriplesMap_8329089f-1106-4e03-811c-41a884329796 rr:predicateObjectMap km-dev:PredicateObjectMap_35399c02-6beb-4982-898c-9c392a75289a .
+
+km-dev:PredicateObjectMap_35399c02-6beb-4982-898c-9c392a75289a a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_35399c02-6beb-4982-898c-9c392a75289a .
+
+km-dev:PredicateObjectMap_92748da9-6d56-4497-bf72-74e904143602 rr:predicate schema:hasPart .
+
+km-dev:RefObjectMap_7529d5f8-94f7-4526-871a-e8f8b4b05301 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_a865b90c-d6f9-427e-8254-7e2469e3b56a ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap km-dev:RefObjectMap_7529d5f8-94f7-4526-871a-e8f8b4b05301 .
+
+km-dev:PredicateObjectMap_92748da9-6d56-4497-bf72-74e904143602 rr:objectMap km-dev:RefObjectMap_7529d5f8-94f7-4526-871a-e8f8b4b05301 .
+
+km-dev:TriplesMap_8329089f-1106-4e03-811c-41a884329796 rr:predicateObjectMap km-dev:PredicateObjectMap_92748da9-6d56-4497-bf72-74e904143602 .
+
+km-dev:PredicateObjectMap_92748da9-6d56-4497-bf72-74e904143602 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_92748da9-6d56-4497-bf72-74e904143602 .
+
+km-dev:PredicateObjectMap_0427203a-8e70-4ee6-a583-29d0d83f7d88 rr:predicate schema:hasPart .
+
+km-dev:RefObjectMap_23cd610f-83e2-4d64-9d02-b3c30cc012e3 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_11e184d4-5891-409d-bd54-9a65a8bda5b3 ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap km-dev:RefObjectMap_23cd610f-83e2-4d64-9d02-b3c30cc012e3 .
+
+km-dev:PredicateObjectMap_0427203a-8e70-4ee6-a583-29d0d83f7d88 rr:objectMap km-dev:RefObjectMap_23cd610f-83e2-4d64-9d02-b3c30cc012e3 .
+
+km-dev:TriplesMap_8329089f-1106-4e03-811c-41a884329796 rr:predicateObjectMap km-dev:PredicateObjectMap_0427203a-8e70-4ee6-a583-29d0d83f7d88 .
+
+km-dev:PredicateObjectMap_0427203a-8e70-4ee6-a583-29d0d83f7d88 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_0427203a-8e70-4ee6-a583-29d0d83f7d88 .
+
+km-dev:PredicateObjectMap_0964a08c-b1f8-43bb-9dd3-7a0dc8f4aa75 rr:predicate schema:hasPart .
+
+km-dev:RefObjectMap_e9845435-d22b-4b73-b482-425d01e4cea8 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_a8da13b3-4595-4cb4-842d-d3d1b3d07193 ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap km-dev:RefObjectMap_e9845435-d22b-4b73-b482-425d01e4cea8 .
+
+km-dev:PredicateObjectMap_0964a08c-b1f8-43bb-9dd3-7a0dc8f4aa75 rr:objectMap km-dev:RefObjectMap_e9845435-d22b-4b73-b482-425d01e4cea8 .
+
+km-dev:TriplesMap_8329089f-1106-4e03-811c-41a884329796 rr:predicateObjectMap km-dev:PredicateObjectMap_0964a08c-b1f8-43bb-9dd3-7a0dc8f4aa75 .
+
+km-dev:PredicateObjectMap_0964a08c-b1f8-43bb-9dd3-7a0dc8f4aa75 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_0964a08c-b1f8-43bb-9dd3-7a0dc8f4aa75 .
+
+km-dev:TriplesMap_d61fddd6-de67-49c7-9a23-a2573c2fd1f0 a rr:TriplesMap .
+
+_:node1abgso67fx1 km-dev:hasTriplesMap km-dev:TriplesMap_d61fddd6-de67-49c7-9a23-a2573c2fd1f0 .
+
+km-dev:TriplesMap_d61fddd6-de67-49c7-9a23-a2573c2fd1f0 km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx7 rr:tableName "events_sample.jl" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasLogicalTable _:node1abgso67fx7 .
+
+km-dev:TriplesMap_d61fddd6-de67-49c7-9a23-a2573c2fd1f0 rr:logicalTable _:node1abgso67fx7 ;
+	rr:subjectMap _:node1abgso67fx8 .
+
+_:node1abgso67fx1 km-dev:hasSubjectMap _:node1abgso67fx8 .
+
+_:node1abgso67fx8 km-dev:isPartOfMapping _:node1abgso67fx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://schema.org/Thing3" ;
+	rr:class schema:Thing .
+
+_:node1abgso67fx9 rr:template "{[\"affected\",\"aff_prop\"]}" .
+
+_:node1abgso67fx8 rr:class _:node1abgso67fx9 ;
+	rr:template "{[\"affected\",\"aff_prop\"]}/{[\"affected\",\"type\"]}" .
+
+km-dev:PredicateObjectMap_b73b8cfc-4fee-47a1-8135-1ed779afed8b rr:predicate memex:hasPhrase .
+
+_:node1abgso67fx10 rr:column "[\"affected\",\"context\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx10 .
+
+km-dev:PredicateObjectMap_b73b8cfc-4fee-47a1-8135-1ed779afed8b rr:objectMap _:node1abgso67fx10 .
+
+km-dev:TriplesMap_d61fddd6-de67-49c7-9a23-a2573c2fd1f0 rr:predicateObjectMap km-dev:PredicateObjectMap_b73b8cfc-4fee-47a1-8135-1ed779afed8b .
+
+km-dev:PredicateObjectMap_b73b8cfc-4fee-47a1-8135-1ed779afed8b a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b73b8cfc-4fee-47a1-8135-1ed779afed8b .
+
+km-dev:PredicateObjectMap_9e132a6d-3e26-4812-81c8-089c7ee05fb3 rr:predicate memex:hasType .
+
+_:node1abgso67fx11 rr:column "[\"affected\",\"type\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx11 .
+
+km-dev:PredicateObjectMap_9e132a6d-3e26-4812-81c8-089c7ee05fb3 rr:objectMap _:node1abgso67fx11 .
+
+km-dev:TriplesMap_d61fddd6-de67-49c7-9a23-a2573c2fd1f0 rr:predicateObjectMap km-dev:PredicateObjectMap_9e132a6d-3e26-4812-81c8-089c7ee05fb3 .
+
+km-dev:PredicateObjectMap_9e132a6d-3e26-4812-81c8-089c7ee05fb3 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9e132a6d-3e26-4812-81c8-089c7ee05fb3 .
+
+km-dev:PredicateObjectMap_6b76a0c1-75a5-4d54-9c94-28e3ce0f9b14 rr:predicate schema:name .
+
+_:node1abgso67fx12 rr:column "[\"affected\",\"value\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx12 .
+
+km-dev:PredicateObjectMap_6b76a0c1-75a5-4d54-9c94-28e3ce0f9b14 rr:objectMap _:node1abgso67fx12 .
+
+km-dev:TriplesMap_d61fddd6-de67-49c7-9a23-a2573c2fd1f0 rr:predicateObjectMap km-dev:PredicateObjectMap_6b76a0c1-75a5-4d54-9c94-28e3ce0f9b14 .
+
+km-dev:PredicateObjectMap_6b76a0c1-75a5-4d54-9c94-28e3ce0f9b14 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_6b76a0c1-75a5-4d54-9c94-28e3ce0f9b14 .
+
+km-dev:TriplesMap_94030389-d843-4fb5-83cf-7ab250352319 a rr:TriplesMap .
+
+_:node1abgso67fx1 km-dev:hasTriplesMap km-dev:TriplesMap_94030389-d843-4fb5-83cf-7ab250352319 .
+
+km-dev:TriplesMap_94030389-d843-4fb5-83cf-7ab250352319 km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx13 rr:tableName "events_sample.jl" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasLogicalTable _:node1abgso67fx13 .
+
+km-dev:TriplesMap_94030389-d843-4fb5-83cf-7ab250352319 rr:logicalTable _:node1abgso67fx13 ;
+	rr:subjectMap _:node1abgso67fx14 .
+
+_:node1abgso67fx1 km-dev:hasSubjectMap _:node1abgso67fx14 .
+
+_:node1abgso67fx14 km-dev:isPartOfMapping _:node1abgso67fx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://schema.org/Thing4" ;
+	rr:class schema:Thing .
+
+_:node1abgso67fx15 rr:template "{[\"caused\",\"cau_prop\"]}" .
+
+_:node1abgso67fx14 rr:class _:node1abgso67fx15 ;
+	rr:template "{[\"caused\",\"cau_prop\"]}/{[\"caused\",\"type\"]}" .
+
+km-dev:PredicateObjectMap_f4c3f655-8078-4f81-ac43-cfc5c0785fc3 rr:predicate memex:hasPhrase .
+
+_:node1abgso67fx16 rr:column "[\"caused\",\"context\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx16 .
+
+km-dev:PredicateObjectMap_f4c3f655-8078-4f81-ac43-cfc5c0785fc3 rr:objectMap _:node1abgso67fx16 .
+
+km-dev:TriplesMap_94030389-d843-4fb5-83cf-7ab250352319 rr:predicateObjectMap km-dev:PredicateObjectMap_f4c3f655-8078-4f81-ac43-cfc5c0785fc3 .
+
+km-dev:PredicateObjectMap_f4c3f655-8078-4f81-ac43-cfc5c0785fc3 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f4c3f655-8078-4f81-ac43-cfc5c0785fc3 .
+
+km-dev:PredicateObjectMap_9e7cdcc7-8805-4b98-be53-1725c5f24b66 rr:predicate memex:hasType .
+
+_:node1abgso67fx17 rr:column "[\"caused\",\"type\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx17 .
+
+km-dev:PredicateObjectMap_9e7cdcc7-8805-4b98-be53-1725c5f24b66 rr:objectMap _:node1abgso67fx17 .
+
+km-dev:TriplesMap_94030389-d843-4fb5-83cf-7ab250352319 rr:predicateObjectMap km-dev:PredicateObjectMap_9e7cdcc7-8805-4b98-be53-1725c5f24b66 .
+
+km-dev:PredicateObjectMap_9e7cdcc7-8805-4b98-be53-1725c5f24b66 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9e7cdcc7-8805-4b98-be53-1725c5f24b66 .
+
+km-dev:PredicateObjectMap_9200c295-a4e9-47c6-91c3-7b110a6e4fc6 rr:predicate schema:name .
+
+_:node1abgso67fx18 rr:column "[\"caused\",\"value\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx18 .
+
+km-dev:PredicateObjectMap_9200c295-a4e9-47c6-91c3-7b110a6e4fc6 rr:objectMap _:node1abgso67fx18 .
+
+km-dev:TriplesMap_94030389-d843-4fb5-83cf-7ab250352319 rr:predicateObjectMap km-dev:PredicateObjectMap_9200c295-a4e9-47c6-91c3-7b110a6e4fc6 .
+
+km-dev:PredicateObjectMap_9200c295-a4e9-47c6-91c3-7b110a6e4fc6 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9200c295-a4e9-47c6-91c3-7b110a6e4fc6 .
+
+km-dev:TriplesMap_a865b90c-d6f9-427e-8254-7e2469e3b56a a rr:TriplesMap .
+
+_:node1abgso67fx1 km-dev:hasTriplesMap km-dev:TriplesMap_a865b90c-d6f9-427e-8254-7e2469e3b56a .
+
+km-dev:TriplesMap_a865b90c-d6f9-427e-8254-7e2469e3b56a km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx19 rr:tableName "events_sample.jl" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasLogicalTable _:node1abgso67fx19 .
+
+km-dev:TriplesMap_a865b90c-d6f9-427e-8254-7e2469e3b56a rr:logicalTable _:node1abgso67fx19 ;
+	rr:subjectMap _:node1abgso67fx20 .
+
+_:node1abgso67fx1 km-dev:hasSubjectMap _:node1abgso67fx20 .
+
+_:node1abgso67fx20 km-dev:isPartOfMapping _:node1abgso67fx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://schema.org/Thing1" ;
+	rr:class schema:Thing .
+
+_:node1abgso67fx21 rr:template "{[\"location\",\"loc_prop\"]}" .
+
+_:node1abgso67fx20 rr:class _:node1abgso67fx21 ;
+	rr:template "{[\"location\",\"loc_prop\"]}/{[\"location\",\"type\"]}" .
+
+km-dev:PredicateObjectMap_bc2e14be-b111-4484-bfd2-1b2c8596bdac rr:predicate memex:hasPhrase .
+
+_:node1abgso67fx22 rr:column "[\"location\",\"context\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx22 .
+
+km-dev:PredicateObjectMap_bc2e14be-b111-4484-bfd2-1b2c8596bdac rr:objectMap _:node1abgso67fx22 .
+
+km-dev:TriplesMap_a865b90c-d6f9-427e-8254-7e2469e3b56a rr:predicateObjectMap km-dev:PredicateObjectMap_bc2e14be-b111-4484-bfd2-1b2c8596bdac .
+
+km-dev:PredicateObjectMap_bc2e14be-b111-4484-bfd2-1b2c8596bdac a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_bc2e14be-b111-4484-bfd2-1b2c8596bdac .
+
+km-dev:PredicateObjectMap_e465f28a-2505-4ba0-bddf-eed06cb583a9 rr:predicate memex:hasType .
+
+_:node1abgso67fx23 rr:column "[\"location\",\"type\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx23 .
+
+km-dev:PredicateObjectMap_e465f28a-2505-4ba0-bddf-eed06cb583a9 rr:objectMap _:node1abgso67fx23 .
+
+km-dev:TriplesMap_a865b90c-d6f9-427e-8254-7e2469e3b56a rr:predicateObjectMap km-dev:PredicateObjectMap_e465f28a-2505-4ba0-bddf-eed06cb583a9 .
+
+km-dev:PredicateObjectMap_e465f28a-2505-4ba0-bddf-eed06cb583a9 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_e465f28a-2505-4ba0-bddf-eed06cb583a9 .
+
+km-dev:PredicateObjectMap_b30d3fd2-d069-47b1-82f7-e6391be50964 rr:predicate schema:name .
+
+_:node1abgso67fx24 rr:column "[\"location\",\"value\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx24 .
+
+km-dev:PredicateObjectMap_b30d3fd2-d069-47b1-82f7-e6391be50964 rr:objectMap _:node1abgso67fx24 .
+
+km-dev:TriplesMap_a865b90c-d6f9-427e-8254-7e2469e3b56a rr:predicateObjectMap km-dev:PredicateObjectMap_b30d3fd2-d069-47b1-82f7-e6391be50964 .
+
+km-dev:PredicateObjectMap_b30d3fd2-d069-47b1-82f7-e6391be50964 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b30d3fd2-d069-47b1-82f7-e6391be50964 .
+
+km-dev:TriplesMap_11e184d4-5891-409d-bd54-9a65a8bda5b3 a rr:TriplesMap .
+
+_:node1abgso67fx1 km-dev:hasTriplesMap km-dev:TriplesMap_11e184d4-5891-409d-bd54-9a65a8bda5b3 .
+
+km-dev:TriplesMap_11e184d4-5891-409d-bd54-9a65a8bda5b3 km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx25 rr:tableName "events_sample.jl" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasLogicalTable _:node1abgso67fx25 .
+
+km-dev:TriplesMap_11e184d4-5891-409d-bd54-9a65a8bda5b3 rr:logicalTable _:node1abgso67fx25 ;
+	rr:subjectMap _:node1abgso67fx26 .
+
+_:node1abgso67fx1 km-dev:hasSubjectMap _:node1abgso67fx26 .
+
+_:node1abgso67fx26 km-dev:isPartOfMapping _:node1abgso67fx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://schema.org/Thing2" ;
+	rr:class schema:Thing .
+
+_:node1abgso67fx27 rr:template "{[\"object\",\"type_prop\"]}" .
+
+_:node1abgso67fx26 rr:class _:node1abgso67fx27 ;
+	rr:template "{[\"object\",\"type_prop\"]}/{[\"object\",\"type\"]}" .
+
+km-dev:PredicateObjectMap_81a9dd43-595f-4d33-b512-fa1dbc3b7ad0 rr:predicate memex:hasPhrase .
+
+_:node1abgso67fx28 rr:column "[\"object\",\"context\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx28 .
+
+km-dev:PredicateObjectMap_81a9dd43-595f-4d33-b512-fa1dbc3b7ad0 rr:objectMap _:node1abgso67fx28 .
+
+km-dev:TriplesMap_11e184d4-5891-409d-bd54-9a65a8bda5b3 rr:predicateObjectMap km-dev:PredicateObjectMap_81a9dd43-595f-4d33-b512-fa1dbc3b7ad0 .
+
+km-dev:PredicateObjectMap_81a9dd43-595f-4d33-b512-fa1dbc3b7ad0 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_81a9dd43-595f-4d33-b512-fa1dbc3b7ad0 .
+
+km-dev:PredicateObjectMap_e44554be-ed38-48fa-9984-cae457355c55 rr:predicate memex:hasType .
+
+_:node1abgso67fx29 rr:column "[\"object\",\"type\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx29 .
+
+km-dev:PredicateObjectMap_e44554be-ed38-48fa-9984-cae457355c55 rr:objectMap _:node1abgso67fx29 .
+
+km-dev:TriplesMap_11e184d4-5891-409d-bd54-9a65a8bda5b3 rr:predicateObjectMap km-dev:PredicateObjectMap_e44554be-ed38-48fa-9984-cae457355c55 .
+
+km-dev:PredicateObjectMap_e44554be-ed38-48fa-9984-cae457355c55 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_e44554be-ed38-48fa-9984-cae457355c55 .
+
+km-dev:PredicateObjectMap_f36d71be-6efd-4c44-9dfd-772a6aa156ef rr:predicate schema:name .
+
+_:node1abgso67fx30 rr:column "[\"object\",\"value\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx30 .
+
+km-dev:PredicateObjectMap_f36d71be-6efd-4c44-9dfd-772a6aa156ef rr:objectMap _:node1abgso67fx30 .
+
+km-dev:TriplesMap_11e184d4-5891-409d-bd54-9a65a8bda5b3 rr:predicateObjectMap km-dev:PredicateObjectMap_f36d71be-6efd-4c44-9dfd-772a6aa156ef .
+
+km-dev:PredicateObjectMap_f36d71be-6efd-4c44-9dfd-772a6aa156ef a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f36d71be-6efd-4c44-9dfd-772a6aa156ef .
+
+km-dev:TriplesMap_a8da13b3-4595-4cb4-842d-d3d1b3d07193 a rr:TriplesMap .
+
+_:node1abgso67fx1 km-dev:hasTriplesMap km-dev:TriplesMap_a8da13b3-4595-4cb4-842d-d3d1b3d07193 .
+
+km-dev:TriplesMap_a8da13b3-4595-4cb4-842d-d3d1b3d07193 km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx31 rr:tableName "events_sample.jl" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasLogicalTable _:node1abgso67fx31 .
+
+km-dev:TriplesMap_a8da13b3-4595-4cb4-842d-d3d1b3d07193 rr:logicalTable _:node1abgso67fx31 ;
+	rr:subjectMap _:node1abgso67fx32 .
+
+_:node1abgso67fx1 km-dev:hasSubjectMap _:node1abgso67fx32 .
+
+_:node1abgso67fx32 km-dev:isPartOfMapping _:node1abgso67fx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://schema.org/Thing5" ;
+	rr:class schema:Thing .
+
+_:node1abgso67fx33 rr:template "{[\"observed\",\"obs_prop\"]}" .
+
+_:node1abgso67fx32 rr:class _:node1abgso67fx33 ;
+	rr:template "{[\"observed\",\"obs_prop\"]}/{[\"observed\",\"type\"]}" .
+
+km-dev:PredicateObjectMap_0c5351b8-ac1f-404b-b7a2-57750d50a9cb rr:predicate memex:hasPhrase .
+
+_:node1abgso67fx34 rr:column "[\"observed\",\"context\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx34 .
+
+km-dev:PredicateObjectMap_0c5351b8-ac1f-404b-b7a2-57750d50a9cb rr:objectMap _:node1abgso67fx34 .
+
+km-dev:TriplesMap_a8da13b3-4595-4cb4-842d-d3d1b3d07193 rr:predicateObjectMap km-dev:PredicateObjectMap_0c5351b8-ac1f-404b-b7a2-57750d50a9cb .
+
+km-dev:PredicateObjectMap_0c5351b8-ac1f-404b-b7a2-57750d50a9cb a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_0c5351b8-ac1f-404b-b7a2-57750d50a9cb .
+
+km-dev:PredicateObjectMap_86ccd553-529e-4170-bdd9-ab2c39c5b17d rr:predicate memex:hasType .
+
+_:node1abgso67fx35 rr:column "[\"observed\",\"type\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx35 .
+
+km-dev:PredicateObjectMap_86ccd553-529e-4170-bdd9-ab2c39c5b17d rr:objectMap _:node1abgso67fx35 .
+
+km-dev:TriplesMap_a8da13b3-4595-4cb4-842d-d3d1b3d07193 rr:predicateObjectMap km-dev:PredicateObjectMap_86ccd553-529e-4170-bdd9-ab2c39c5b17d .
+
+km-dev:PredicateObjectMap_86ccd553-529e-4170-bdd9-ab2c39c5b17d a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_86ccd553-529e-4170-bdd9-ab2c39c5b17d .
+
+km-dev:PredicateObjectMap_e74d07e9-d220-4c9f-8ef1-5f018787dc00 rr:predicate schema:name .
+
+_:node1abgso67fx36 rr:column "[\"observed\",\"value\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasObjectMap _:node1abgso67fx36 .
+
+km-dev:PredicateObjectMap_e74d07e9-d220-4c9f-8ef1-5f018787dc00 rr:objectMap _:node1abgso67fx36 .
+
+km-dev:TriplesMap_a8da13b3-4595-4cb4-842d-d3d1b3d07193 rr:predicateObjectMap km-dev:PredicateObjectMap_e74d07e9-d220-4c9f-8ef1-5f018787dc00 .
+
+km-dev:PredicateObjectMap_e74d07e9-d220-4c9f-8ef1-5f018787dc00 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1abgso67fx1 .
+
+_:node1abgso67fx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_e74d07e9-d220-4c9f-8ef1-5f018787dc00 .
